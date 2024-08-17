@@ -143,6 +143,13 @@ nav .nav-links a:hover {
   font-family: copperplate;
   
 }
+.ecell{
+  color: #000080;
+  font-size: 4vw;
+  font-weight: bold;
+  font-family: copperplate;
+
+}
 .slider{
   height: 250px;
   margin: auto;
@@ -207,11 +214,15 @@ nav .nav-links a:hover {
   transform: rotateZ(180deg);
 }
 .para1{
-  color: #000099;
+  color: #ffffff;
   font-size: 30px;
   font-weight: bold;
   font-family:  Helvetica;
   font-style: italic;
+
+}
+#para2{
+  color: #4691ed;
 
 }
 .centercontainer{
@@ -389,7 +400,7 @@ highlight {
     background: linear-gradient(90deg, #ff7f50, #ff6347);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', seri;
     font-weight: bold;
     letter-spacing: 1px;
     display: inline-block;
@@ -547,6 +558,19 @@ highlight {
   max-width: 100%; 
   height: auto;    
   overflow: hidden;
+}
+.glass{
+  background-image: url(./images/glass.jpeg);
+  background-size: cover;
+  width: 100%;
+
+}
+.bannerimg{
+  width: 100%;
+}
+#mainimg{
+  height: 200px;
+  width: 100000000000000000px;
 }
 
 
