@@ -16,6 +16,9 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+#register{
+  color: white;
+}
 
 .logo img {
   max-width: 150px;
@@ -57,11 +60,45 @@ nav .nav-links a:hover {
 }
 
 .register-btn {
-  background-color: #e67e22;
-  color: #fff;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #405fbe; -webkit-box-shadow: 0 0 3px #405fbe; }
+  50% { background-color: #2d1d7c; -webkit-box-shadow: 0 0 40px #2d1d7c; }
+  100% { background-color: #312e6e; -webkit-box-shadow: 0 0 3px #312e6e; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #405fbe; -moz-box-shadow: 0 0 3px #405fbe; }
+  50% { background-color: #2d1d7c; -moz-box-shadow: 0 0 40px#2d1d7c; }
+  100% { background-color: #312e6e; -moz-box-shadow: 0 0 3px #312e6e; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color:  #405fbe; box-shadow: 0 0 3px #405fbe; }
+  50% { background-color: #2d1d7c; box-shadow: 0 0 40px#2d1d7c; }
+  100% { background-color: #312e6e; box-shadow: 0 0 3px #312e6e; }
+}
+
+@keyframes glowing {
+  0% { background-color:  #405fbe; box-shadow: 0 0 3px #405fbe; }
+  50% { background-color: #2d1d7c; box-shadow: 0 0 40px #2d1d7c; }
+  100% { background-color: #312e6e; box-shadow: 0 0 3px #312e6e; }
 }
 
 .register-btn:hover {
@@ -101,7 +138,7 @@ nav .nav-links a:hover {
 
 .home-heading{
   color: #000080;
-  font-size: 10vw;
+  font-size: 11vw;
   font-weight: bold;
   font-family: copperplate;
 }
@@ -170,9 +207,11 @@ nav .nav-links a:hover {
 }
 .para1{
   color: #000099;
-  font-size: 4vw;
+  font-size: 30px;
   font-weight: bold;
   font-family:  Helvetica;
+  font-style: italic;
+
 }
 .centercontainer{
   display: flex;
