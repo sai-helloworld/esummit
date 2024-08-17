@@ -138,9 +138,10 @@ nav .nav-links a:hover {
 
 .home-heading{
   color: #000080;
-  font-size: 11vw;
+  font-size: 12vw;
   font-weight: bold;
   font-family: copperplate;
+  
 }
 .slider{
   height: 250px;
