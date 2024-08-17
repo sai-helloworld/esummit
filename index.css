@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  background-color: #dedede9f;
 }
 
 nav {
@@ -330,9 +334,17 @@ footer {
   background-color: #1a1a1a;
   color: #fff;
   padding: 40px 0;
-  text-align: left;
+  text-align: center;
 }
-
+.social-icons {
+  transition: filter 0.1s, scale 0.1s;
+}
+.social-icons:hover {
+  scale: 1.1;
+  filter: invert(0.8);
+  filter: brightness(0) saturate(100%) invert(40%) sepia(84%) saturate(678%)
+    hue-rotate(200deg) brightness(94%) contrast(89%);
+}
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
