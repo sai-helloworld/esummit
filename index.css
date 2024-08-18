@@ -14,7 +14,9 @@ nav {
   background-color: transparent;
   padding: 10px 20px;
 }
-
+.countdown-timer {
+  background-color: yellow;
+}
 .container {
   display: flex;
   align-items: center;
