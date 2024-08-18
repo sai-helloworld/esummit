@@ -209,7 +209,18 @@ nav .nav-links a:hover {
 .register-btn:hover {
   background-color: #d35400;
 }
-
+.cards_container {
+  /* width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; */
+  justify-content: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 @media (max-width: 768px) {
   .container {
     flex-wrap: wrap;
@@ -283,8 +294,11 @@ nav .nav-links a:hover {
   }
 
   .big-text {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     top: -5px;
+  }
+  .time-label {
+    font-size: 3vw;
   }
 }
 
@@ -295,8 +309,13 @@ nav .nav-links a:hover {
   }
 
   .big-text {
-    font-size: 2rem;
+    font-size: 3rem;
     top: 0;
+  }
+  .flip-card-inner {
+    width: 20vw;
+    height: 80px;
+    margin: 0;
   }
 }
 
