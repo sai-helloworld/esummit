@@ -1,0 +1,250 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      #timer {
+        font-size: 3em;
+        margin-top: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="timer">
+      <p id="countdown"></p>
+    </div>
+
+    <script>
+      // Set the date and time for the countdown
+      var countdownDate = new Date("Aug 22, 2024 09:29:59").getTime();
+
+      // Update the countdown every second
+      var countdownFunction = setInterval(function () {
+        // Get current date and time
+        var now = new Date().getTime();
+
+        // Calculate the remaining time
+        var remainingTime = countdownDate - now;
+
+        // Time calculations for days, hours, minutes, and seconds
+        var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor(
+          (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        // Display the result
+        document.getElementById("countdown").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the countdown is over, display a message
+        if (remainingTime < 0) {
+          clearInterval(countdownFunction);
+          document.getElementById("countdown").innerHTML = "STARTED";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipping Countdown Timer</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #4a90e2, #9013fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+      }
+
+      .countdown-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .flip-card {
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100px;
+        height: 150px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        background-color: #ffffff33;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 3em;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .flip-card-back {
+        background-color: #ffffff;
+        color: #333;
+        transform: rotateY(180deg);
+      }
+
+      .time-label {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countdown-container">
+      <!-- Days Flip Card -->
+      <div class="flip-card" id="daysCard">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span id="days">00</span>
+          </div>
+          <div class="flip-card-back">
+            <span id="days-back">00</span>
+          </div>
+        </div>
+        <div class="time-label">Days</div>
+      </div>
+
+      <!-- Hours Flip Card -->
+      <div class="flip-card" id="hoursCard">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span id="hours">00</span>
+          </div>
+          <div class="flip-card-back">
+            <span id="hours-back">00</span>
+          </div>
+        </div>
+        <div class="time-label">Hours</div>
+      </div>
+
+      <!-- Minutes Flip Card -->
+      <div class="flip-card" id="minutesCard">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span id="minutes">00</span>
+          </div>
+          <div class="flip-card-back">
+            <span id="minutes-back">00</span>
+          </div>
+        </div>
+        <div class="time-label">Minutes</div>
+      </div>
+
+      <!-- Seconds Flip Card -->
+      <div class="flip-card" id="secondsCard">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span id="seconds">00</span>
+          </div>
+          <div class="flip-card-back">
+            <span id="seconds-back">00</span>
+          </div>
+        </div>
+        <div class="time-label">Seconds</div>
+      </div>
+    </div>
+
+    <script>
+      var countdownDate = new Date("aug 22, 2024 09:29:59").getTime();
+
+      function flipCard(id, frontValue, backValue) {
+        let card = document
+          .getElementById(id)
+          .querySelector(".flip-card-inner");
+        let front = document.getElementById(frontValue);
+        let back = document.getElementById(backValue);
+
+        if (front.textContent !== back.textContent) {
+          card.style.transform = "rotateY(180deg)";
+          setTimeout(function () {
+            front.textContent = back.textContent;
+            card.style.transform = "rotateY(0deg)";
+          }, 500);
+        }
+      }
+
+      function updateTimer() {
+        var now = new Date().getTime();
+        var remainingTime = countdownDate - now;
+
+        // Time calculations
+        var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor(
+          (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        // Update the values on the back of the card
+        document.getElementById("days-back").textContent = days;
+        document.getElementById("hours-back").textContent = ("0" + hours).slice(
+          -2
+        );
+        document.getElementById("minutes-back").textContent = (
+          "0" + minutes
+        ).slice(-2);
+        document.getElementById("seconds-back").textContent = (
+          "0" + seconds
+        ).slice(-2);
+
+        // Flip the cards when the value changes
+        flipCard("daysCard", "days", "days-back");
+        flipCard("hoursCard", "hours", "hours-back");
+        flipCard("minutesCard", "minutes", "minutes-back");
+        flipCard("secondsCard", "seconds", "seconds-back");
+
+        // If the countdown is over
+        if (remainingTime < 0) {
+          clearInterval(timer);
+          document.getElementById("days-back").textContent = "00";
+          document.getElementById("hours-back").textContent = "00";
+          document.getElementById("minutes-back").textContent = "00";
+          document.getElementById("seconds-back").textContent = "00";
+        }
+      }
+
+      // Update every second
+      var timer = setInterval(updateTimer, 1000);
+      updateTimer(); // Run once immediately
+    </script>
+  </body>
+</html>
