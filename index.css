@@ -2,69 +2,6 @@
 html {
   scroll-behavior: smooth;
 }
-.bodynav {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: sticky;
-  top: 0px;
-  z-index: 1000;
-  background-color: #dedede9f;
-  position: sticky;
-  top: 0px;
-  z-index: 1000;
-  background-color: #dedede9f;
-}
-nav {
-  background-color: transparent;
-  padding: 10px 20px;
-}
-
-#register {
-  color: white;
-}
-#family {
-  font-family: rancho;
-}
-
-.logo img {
-  max-width: 500px;
-}
-
-nav input[type="checkbox"] {
-  display: none;
-}
-
-nav .menu-icon {
-  display: none;
-  font-size: 24px;
-  color: black;
-}
-
-nav .nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-top: 30px;
-}
-
-nav .nav-links li {
-  margin-left: 20px;
-}
-
-nav .nav-links a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 16px;
-  padding: 8px 15px;
-  transition: color 0.3s ease;
-}
-
-nav .nav-links a:hover {
-  color: #000000;
-}
-
 .register-btn {
   background-color: #004a7f;
   -webkit-border-radius: 10px;
@@ -83,71 +20,9 @@ nav .nav-links a:hover {
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
-.timer {
-  margin-top: 5vh;
-
-  /* background: linear-gradient(135deg, #4a90e2, #9013fe); */
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: white;
-  box-sizing: border-box;
-  margin-bottom: 5vh;
+#text{
+  color: black;
 }
-.countdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.flip-card {
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100px;
-  height: 150px;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: #000080ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  font-size: 3em;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.flip-card-back {
-  background-color: #ffffff;
-  color: #333;
-  transform: rotateY(180deg);
-}
-
-.time-label {
-  font-size: 1.2em;
-  text-transform: uppercase;
-  margin-top: 10px;
-  text-align: center;
-  color: #000080ff;
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 @-webkit-keyframes glowing {
   0% {
     background-color: #405fbe;
@@ -211,6 +86,72 @@ nav .nav-links a:hover {
 .register-btn:hover {
   background-color: #d35400;
 }
+.timer {
+  margin-top: 5vh;
+
+  /* background: linear-gradient(135deg, #4a90e2, #9013fe); */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  margin-bottom: 5vh;
+}
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #000080ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 3em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card-back {
+  background-color: #ffffff;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+.time-label {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
+  color: #000080ff;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cards_container {
   width: 100%;
   display: grid;
@@ -223,36 +164,7 @@ nav .nav-links a:hover {
   flex-direction: row;
   justify-content: center;
 }
-@media (max-width: 768px) {
-  .container {
-    flex-wrap: wrap;
-  }
 
-  .logo {
-    flex: 1;
-  }
-
-  nav .menu-icon {
-    display: block;
-  }
-
-  nav .nav-links {
-    flex-direction: column;
-    width: 100%;
-    background-color: transparent;
-    display: none;
-    margin-top: 20px;
-    align-items: center;
-  }
-
-  nav .nav-links li {
-    margin: 10px 0;
-  }
-
-  nav input[type="checkbox"]:checked ~ .nav-links {
-    display: flex;
-  }
-}
 
 .centered-text > .small-text {
   color: #4792edff;
@@ -270,6 +182,7 @@ nav .nav-links a:hover {
   font-weight: bold;
   letter-spacing: 5px;
   text-align: center;
+  margin-top: 0;
 }
 
 .centered-text::before {
@@ -877,4 +790,8 @@ highlight {
   .block2-1-1 {
     order: 1;
   }
+}
+.timer {
+  padding-top: 50px; 
+  margin-bottom: 0;
 }

@@ -32,31 +32,28 @@
     />
   </head>
   <body>
-    <nav class="bodynav" id="navbar">
-      <div class="container">
-        <div class="logo">
-          <img src="./images/log.png-removebg-preview.png" alt="E-Summit Logo" />
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
+      <img src="./images/log.png-removebg-preview.png" alt="E-Summit Logo" class="ml-5 navbar-logo " />
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto mr-5" id="text">
+          <a class="nav-item nav-link active" href="#explore">Explore <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#about">Highlights</a>
+          <a class="nav-item nav-link" href="events.html">Events</a>
+          <a class="nav-item nav-link" href="#">Speakers</a>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeZQ9CdWHNRl_gWwWROifw-FDzxaTlBg7jArUfEbycs5gMG-A/viewform"
+            class="register-btn"
+            id="register"
+            >Register</a>
+          
         </div>
-        <!-- helloworldsssss-->
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="nav-links">
-          <li><a href="#explore">Explore</a></li>
-          <li><a href="#about">Highlights</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeZQ9CdWHNRl_gWwWROifw-FDzxaTlBg7jArUfEbycs5gMG-A/viewform"
-              class="register-btn"
-              id="register"
-              >Register</a
-            >
-          </li>
-        </ul>
       </div>
     </nav>
-    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+    <div class="timer">
+<script src="https://cdn.logwork.com/widget/countdown.js"></script>
     <div class="timer">
       <div class="countdown-container">
         <div class="flip-card" id="daysCard">
@@ -168,9 +165,10 @@
       var timer = setInterval(updateTimer, 1000);
       updateTimer();
     </script>
+    </div>
     <div class="centered-text">
       <div class="small-text" id="e-cell" align="center">E-Cell Presents</div>
-      <div class="big-text" id="e-summit">E-SUMMIT 2024</div>
+      <div class="big-text " id="e-summit">E-SUMMIT 2024</div>
     </div>
     <div class="text-center">
       <p class="para1" id="para2">In association with</p>
