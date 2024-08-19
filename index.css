@@ -792,12 +792,13 @@ highlight {
 }
 
 .img-3 {
-  width: 50%;
+  width: 40%;
   border-radius: 25px;
   aspect-ratio: 8 / 5;
   align-self: center;
   justify-self: center;
   cursor: none;
+  height: 100%;
 }
 .img-3:hover {
   scale: 1.005;
