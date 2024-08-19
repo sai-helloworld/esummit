@@ -654,6 +654,9 @@ highlight {
   left: 50%;
   transform: translateX(-50%);
 }
+.block2 > .head::before {
+  width: 10%;
+}
 #explore {
   display: flex;
   flex-direction: column;
@@ -818,7 +821,7 @@ highlight {
   /* border: 2px white solid; */
   border-radius: 20px;
   margin: 5px;
-  font-weight: 100;
+  font-weight: 400;
 }
 .block2-2-1-2,
 .block2-1-1-2 {
@@ -826,6 +829,7 @@ highlight {
   /* border: 2px white solid; */
   border-radius: 20px;
   font-weight: 400;
+  color: #656464;
 }
 
 .button {
@@ -853,9 +857,9 @@ highlight {
 }
 
 @media (width < 1200px) {
-  .block2 {
+  /* .block2 {
     align-items: center;
-  }
+  } */
   .block2-1,
   .block2-2 {
     display: flex;
