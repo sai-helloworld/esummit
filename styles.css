@@ -68,7 +68,6 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-/* Button styling */
 .btn-primary {
   background-color: #000080;
   border-color: #000080;
@@ -234,10 +233,15 @@ footer {
   }
 }
 
+.container {
+  margin: auto;
+}
 .containers {
   background: linear-gradient(135deg, #e0eafc, #ffffff);
-  padding: 20px;
+  /* padding: 20px; */
+  padding: 0;
   border-radius: 10px;
+  margin: auto;
 }
 
 .bodynav {
@@ -249,7 +253,6 @@ footer {
   top: 0px;
   z-index: 1000;
   background-color: #dedede9f;
-  position: sticky;
   top: 0px;
   z-index: 1000;
   background-color: #dedede9f;
@@ -330,10 +333,6 @@ nav .nav-links a:hover {
 }
 
 @media (max-width: 768px) {
-  .bodynav {
-    position: static;
-    top: 0px;
-  }
   .bodynav > .container {
     flex-wrap: wrap;
   }
@@ -344,6 +343,9 @@ nav .nav-links a:hover {
 
   nav .menu-icon {
     display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   nav .nav-links {
@@ -392,7 +394,8 @@ nav .nav-links a:hover {
   padding: 20px;
   gap: 20px;
   box-shadow: 5px 5px 10px #58585882;
-  max-width: 100%;
+  max-width: 95%;
+  min-height: 190px;
 }
 .card1:hover {
   scale: 1.02;
@@ -404,9 +407,6 @@ nav .nav-links a:hover {
   background-color: #000080;
   color: white;
   display: flex;
-  /* align-items: center;
-  align-content: center;
-  justify-items: center; */
   justify-content: baseline;
   flex-direction: column;
   padding-bottom: 5px;
@@ -441,7 +441,7 @@ nav .nav-links a:hover {
   gap: 20px;
   box-shadow: 5px 5px 10px #58585882;
   max-width: 90%;
-  
+  min-height: 360px;
 }
 .card2:hover {
   scale: 1.02;
@@ -459,11 +459,11 @@ nav .nav-links a:hover {
 @keyframes scrollreveal1RL {
   from {
     opacity: 0;
-    transform: translateX(3%);
+    transform: translateY(10%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -476,11 +476,11 @@ nav .nav-links a:hover {
 @keyframes scrollreveal1LR {
   from {
     opacity: 0;
-    transform: translateX(-3%);
+    transform: translateY(-10%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -492,11 +492,11 @@ nav .nav-links a:hover {
 @keyframes scrollrevealRL {
   from {
     opacity: 0;
-    transform: translateX(3%);
+    transform: translateY(10%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 .animationLR {
@@ -507,11 +507,11 @@ nav .nav-links a:hover {
 @keyframes scrollrevealLR {
   from {
     opacity: 0;
-    transform: translateX(-3%);
+    transform: translateY(-10%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -522,7 +522,7 @@ nav .nav-links a:hover {
 @keyframes slideDownFade {
   from {
     opacity: 0;
-    transform: translateY(-5%);
+    transform: translateY(-3%);
   }
   to {
     opacity: 1;
@@ -533,7 +533,4 @@ nav .nav-links a:hover {
 .logo img {
   width: 80%;
   min-width: 100px;
-}
-#tim{
-  margin-right: 2px;
 }
