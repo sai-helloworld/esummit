@@ -392,8 +392,7 @@ nav .nav-links a:hover {
   padding: 20px;
   gap: 20px;
   box-shadow: 5px 5px 10px #58585882;
-  max-width: 90%;
-  min-height: 200px;
+  max-width: 100%;
 }
 .card1:hover {
   scale: 1.02;
@@ -442,6 +441,7 @@ nav .nav-links a:hover {
   gap: 20px;
   box-shadow: 5px 5px 10px #58585882;
   max-width: 90%;
+  
 }
 .card2:hover {
   scale: 1.02;
@@ -533,4 +533,7 @@ nav .nav-links a:hover {
 .logo img {
   width: 80%;
   min-width: 100px;
+}
+#tim{
+  margin-right: 2px;
 }
