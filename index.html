@@ -32,14 +32,26 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
-      <img src="./images/log.png-removebg-preview.png" alt="E-Summit Logo" class="ml-5 navbar-logo " />
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="logo">
+        <img src="./images/log.png-removebg-preview.png" alt="E-Summit Logo" />
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto mr-5" id="text">
-          <a class="nav-item nav-link active" href="#explore">Explore <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#explore"
+            >Explore <span class="sr-only">(current)</span></a
+          >
           <a class="nav-item nav-link" href="#about">Highlights</a>
           <a class="nav-item nav-link" href="events.html">Events</a>
           <a class="nav-item nav-link" href="#">Speakers</a>
@@ -47,13 +59,40 @@
             href="https://docs.google.com/forms/d/e/1FAIpQLSeZQ9CdWHNRl_gWwWROifw-FDzxaTlBg7jArUfEbycs5gMG-A/viewform"
             class="register-btn"
             id="register"
-            >Register</a>
-          
+            >Register</a
+          >
         </div>
       </div>
+    </nav> -->
+
+    <nav class="bodynav" id="navbar">
+      <div class="container overflow1">
+        <div class="logo">
+          <img
+            src="./images/log.png-removebg-preview.png"
+            alt="E-Summit Logo"
+          />
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="#about">Highlights</a></li>
+
+          <li><a href="#">Speakers</a></li>
+          <li>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeZQ9CdWHNRl_gWwWROifw-FDzxaTlBg7jArUfEbycs5gMG-A/viewform"
+              class="register-btn"
+              id="register"
+              >Register</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
-    <div class="timer">
-<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
     <div class="timer">
       <div class="countdown-container">
         <div class="flip-card" id="daysCard">
@@ -104,74 +143,78 @@
           <div class="time-label">Seconds</div>
         </div>
       </div>
-    </div>
-    <script>
-      var countdownDate = new Date("aug 22, 2024 09:29:59").getTime();
+      <script>
+        var countdownDate = new Date("aug 22, 2024 09:29:59").getTime();
 
-      function flipCard(id, frontValue, backValue) {
-        let card = document
-          .getElementById(id)
-          .querySelector(".flip-card-inner");
-        let front = document.getElementById(frontValue);
-        let back = document.getElementById(backValue);
+        function flipCard(id, frontValue, backValue) {
+          let card = document
+            .getElementById(id)
+            .querySelector(".flip-card-inner");
+          let front = document.getElementById(frontValue);
+          let back = document.getElementById(backValue);
 
-        if (front.textContent !== back.textContent) {
-          card.style.transform = "rotateY(180deg)";
-          setTimeout(function () {
-            front.textContent = back.textContent;
-            card.style.transform = "rotateY(0deg)";
-          }, 500);
+          if (front.textContent !== back.textContent) {
+            card.style.transform = "rotateY(180deg)";
+            setTimeout(function () {
+              front.textContent = back.textContent;
+              card.style.transform = "rotateY(0deg)";
+            }, 500);
+          }
         }
-      }
 
-      function updateTimer() {
-        var now = new Date().getTime();
-        var remainingTime = countdownDate - now;
+        function updateTimer() {
+          var now = new Date().getTime();
+          var remainingTime = countdownDate - now;
 
-        var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor(
-          (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+          var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+          var hours = Math.floor(
+            (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          var minutes = Math.floor(
+            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-        document.getElementById("days-back").textContent = days;
-        document.getElementById("hours-back").textContent = ("0" + hours).slice(
-          -2
-        );
-        document.getElementById("minutes-back").textContent = (
-          "0" + minutes
-        ).slice(-2);
-        document.getElementById("seconds-back").textContent = (
-          "0" + seconds
-        ).slice(-2);
+          document.getElementById("days-back").textContent = days;
+          document.getElementById("hours-back").textContent = (
+            "0" + hours
+          ).slice(-2);
+          document.getElementById("minutes-back").textContent = (
+            "0" + minutes
+          ).slice(-2);
+          document.getElementById("seconds-back").textContent = (
+            "0" + seconds
+          ).slice(-2);
 
-        flipCard("daysCard", "days", "days-back");
-        flipCard("hoursCard", "hours", "hours-back");
-        flipCard("minutesCard", "minutes", "minutes-back");
-        flipCard("secondsCard", "seconds", "seconds-back");
+          flipCard("daysCard", "days", "days-back");
+          flipCard("hoursCard", "hours", "hours-back");
+          flipCard("minutesCard", "minutes", "minutes-back");
+          flipCard("secondsCard", "seconds", "seconds-back");
 
-        if (remainingTime < 0) {
-          clearInterval(timer);
-          document.getElementById("days-back").textContent = "00";
-          document.getElementById("hours-back").textContent = "00";
-          document.getElementById("minutes-back").textContent = "00";
-          document.getElementById("seconds-back").textContent = "00";
+          if (remainingTime < 0) {
+            clearInterval(timer);
+            document.getElementById("days-back").textContent = "00";
+            document.getElementById("hours-back").textContent = "00";
+            document.getElementById("minutes-back").textContent = "00";
+            document.getElementById("seconds-back").textContent = "00";
+          }
         }
-      }
 
-      var timer = setInterval(updateTimer, 1000);
-      updateTimer();
-    </script>
+        var timer = setInterval(updateTimer, 1000);
+        updateTimer();
+      </script>
     </div>
     <div class="centered-text">
       <div class="small-text" id="e-cell" align="center">E-Cell Presents</div>
-      <div class="big-text " id="e-summit">E-SUMMIT 2024</div>
+      <div class="big-text" id="e-summit">E-SUMMIT 2024</div>
     </div>
-    <div class="text-center">
-      <p class="para1" id="para2">In association with</p>
+    <div
+      class="small-text"
+      id="assosiation"
+      align="center"
+      style="color: #4691ed"
+    >
+      In Association With
     </div>
 
     <div class="slider">
@@ -254,7 +297,7 @@
     </div>
 
     <div class="glass">
-      <div class="container">
+      <div class="animation1LR container">
         <div class="row">
           <div class="col-12 text-center">
             <p class="para1">Outreach Partner</p>
@@ -362,8 +405,8 @@
     </div>
     <div class="block2R" id="speakers">
       <div class="block2" id="Certifications">
-        <h1 class="text-center mb-5 head">Speakers</h1>
-        <div class="block2-1">
+        <h1 class="animation1RL text-center mb-5 head">Speakers</h1>
+        <div class="animation1LR block2-1">
           <div class="block2-1-1">
             <div class="block2-1-1-1 blue-underline" align="center">
               Mr.Joginder Tanikella
@@ -372,7 +415,9 @@
               CEO of T-works
             </div>
             <div class="block2-1-1-2 rancho" align="center">
-              His leadership at T-Works is fostering a culture of creativity and experimentation, encouraging hobbyists, makers, and innovators to explore without fear of failure.
+              His leadership at T-Works is fostering a culture of creativity and
+              experimentation, encouraging hobbyists, makers, and innovators to
+              explore without fear of failure.
             </div>
           </div>
           <img
@@ -382,7 +427,7 @@
           />
         </div>
 
-        <div class="block2-2">
+        <div class="animation1RL block2-2">
           <img
             class="img-3 block2-2-2"
             src="/Speakers/Rahul.jpeg"
@@ -396,11 +441,14 @@
               Director and VC of Own a Startup
             </div>
             <div class="block2-2-1-2 rancho" align="center">
-              Experienced Founder/Co-Founder with a demonstrated history of working in the information technology and services industry. Skilled in Analytical Skills, Next Gen, Networking, Customer Experience, and Data Analysis.
+              Experienced Founder/Co-Founder with a demonstrated history of
+              working in the information technology and services industry.
+              Skilled in Analytical Skills, Next Gen, Networking, Customer
+              Experience, and Data Analysis.
             </div>
           </div>
         </div>
-        <div class="block2-1">
+        <div class="animation1LR block2-1">
           <div class="block2-1-1">
             <div class="block2-1-1-1 blue-underline" align="center">
               Mr.Sri Charan Lakkaraju
@@ -409,7 +457,12 @@
               Founder of Student Tribe
             </div>
             <div class="block2-1-1-2 rancho" align="center">
-              Founder & CEO of Student Tribe, launched stuMagz, a student community to discover internships, opportunities, and student events. Forbes 30Under30 Asia 2018 honoree and a Charter Member at TiE Hyderabad, trained more than 300,000+ students on Entrepreneurship, soft skills, interview skills, and recruitment tests.
+              Founder & CEO of Student Tribe, launched stuMagz, a student
+              community to discover internships, opportunities, and student
+              events. Forbes 30Under30 Asia 2018 honoree and a Charter Member at
+              TiE Hyderabad, trained more than 300,000+ students on
+              Entrepreneurship, soft skills, interview skills, and recruitment
+              tests.
             </div>
           </div>
           <img
@@ -419,7 +472,7 @@
           />
         </div>
 
-        <div class="block2-2">
+        <div class="animation1RL block2-2">
           <img
             class="img-3 block2-2-2"
             src="/Speakers/Nandita.jpg"
@@ -433,20 +486,28 @@
               Founder and MD of TEZ
             </div>
             <div class="block2-2-1-2 rancho" align="center">
-              Founder & MD- The Entrepreneur Zone (TEZ) now TEZolutions | Startup Mentor  Consultant , Trainer,Angel Investor, Author/Prof/Ex-Chair CII-IWN, Board member-TiE Hyd, TEDx Speaker,Startup Evangelist &  Economist, Author, Motivational Speaker, Trainer & Coach.
+              Founder & MD- The Entrepreneur Zone (TEZ) now TEZolutions |
+              Startup Mentor Consultant , Trainer,Angel Investor,
+              Author/Prof/Ex-Chair CII-IWN, Board member-TiE Hyd, TEDx
+              Speaker,Startup Evangelist & Economist, Author, Motivational
+              Speaker, Trainer & Coach.
             </div>
           </div>
         </div>
-        <div class="block2-1">
+        <div class="animation1LR block2-1">
           <div class="block2-1-1">
             <div class="block2-1-1-1 blue-underline" align="center">
               Ms.Anupam Pandey
             </div>
             <div class="block2-1-1-3 blue-underline" align="center">
-              Venture Capitalist, Investments and scaling Lead at Anthill Ventures
+              Venture Capitalist, Investments and scaling Lead at Anthill
+              Ventures
             </div>
             <div class="block2-1-1-2 rancho" align="center">
-              investment lead at CIE, IIIT Hyderabad, I managed investments, portfolio management, accelerator programs, and government relations for startups in deeptech, medtech and mediatech domain.Community Manager at Vruksh Ecosystem.
+              investment lead at CIE, IIIT Hyderabad, I managed investments,
+              portfolio management, accelerator programs, and government
+              relations for startups in deeptech, medtech and mediatech
+              domain.Community Manager at Vruksh Ecosystem.
             </div>
           </div>
           <img
@@ -456,7 +517,7 @@
           />
         </div>
 
-        <div class="block2-2">
+        <div class="animation1RL block2-2">
           <img
             class="img-3 block2-2-2"
             src="/Speakers/Satya.jpg"
@@ -470,7 +531,10 @@
               Venture Capitalist,Partner & CEO at FinAnomics Capital
             </div>
             <div class="block2-2-1-2 rancho" align="center">
-              Executive Entrepreneur with a demonstrated track record of working in the Financial Services Industry. Skilled in Private Equity Advisory, Mergers & Acquisitions Advisory, Structured Finance & Debt Syndication.
+              Executive Entrepreneur with a demonstrated track record of working
+              in the Financial Services Industry. Skilled in Private Equity
+              Advisory, Mergers & Acquisitions Advisory, Structured Finance &
+              Debt Syndication.
             </div>
           </div>
         </div>
@@ -528,64 +592,64 @@
     <footer>
       <div class="footer-container container">
         <div class="row">
-        <div class="footer-logo col-12 col-lg-4 col-xl-3">
-          <img src="./images/vardhamanlogo-1.png" alt="E-Summit Logo" />
-          <p>Vardhaman College of Engineering</p>
-        </div>
-        <div class="footer-links col-12 col-lg-4 col-xl-3">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#explore">Explore</a></li>
+          <div class="footer-logo col-12 col-lg-4 col-xl-3">
+            <img src="./images/vardhamanlogo-1.png" alt="E-Summit Logo" />
+            <p>Vardhaman College of Engineering</p>
+          </div>
+          <div class="footer-links col-12 col-lg-4 col-xl-3">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#explore">Explore</a></li>
 
-            <li><a href="#about">Highlights</a></li>
-            <li><a href="#">Speakers</a></li>
+              <li><a href="#about">Highlights</a></li>
+              <li><a href="#">Speakers</a></li>
 
-            <li>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeZQ9CdWHNRl_gWwWROifw-FDzxaTlBg7jArUfEbycs5gMG-A/viewform"
-                class="register-btn"
-                id="register"
-                >Registers</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="footer-social col-12 col-lg-4 col-xl-3">
-          <h3>Follow Us</h3>
-          <a
-            href="https://www.linkedin.com/in/e-cell-vardhaman-77262a323/"
-            name="linkedin"
-          >
-            <img
-              src="images/linkedin.png"
-              alt="linkedin"
-              class="social-icons"
-              height="50px"
-          /></a>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeZQ9CdWHNRl_gWwWROifw-FDzxaTlBg7jArUfEbycs5gMG-A/viewform"
+                  class="register-btn"
+                  id="register"
+                  >Registers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-social col-12 col-lg-4 col-xl-3">
+            <h3>Follow Us</h3>
+            <a
+              href="https://www.linkedin.com/in/e-cell-vardhaman-77262a323/"
+              name="linkedin"
+            >
+              <img
+                src="images/linkedin.png"
+                alt="linkedin"
+                class="social-icons"
+                height="50px"
+            /></a>
 
-          <a
-            href="https://www.instagram.com/ecell__vardhaman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            name="instagram"
-            ><img
-              src="images/instagram.png"
-              alt="instagram"
-              class="social-icons"
-              height="50px"
-          /></a>
-          <a href="mailto:ecell@vardhaman.org" name="mail"
-            ><img
-              src="/images/sendmail.png"
-              alt="twitter"
-              class="social-icons"
-              height="50px"
-          /></a>
+            <a
+              href="https://www.instagram.com/ecell__vardhaman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              name="instagram"
+              ><img
+                src="images/instagram.png"
+                alt="instagram"
+                class="social-icons"
+                height="50px"
+            /></a>
+            <a href="mailto:ecell@vardhaman.org" name="mail"
+              ><img
+                src="/images/sendmail.png"
+                alt="twitter"
+                class="social-icons"
+                height="50px"
+            /></a>
+          </div>
+          <div class="footer-Register col-12 col-lg-12 col-xl-3">
+            <h3 style="font-size: 19px">Organized By</h3>
+            <p>Centre for Innovation and Entrepreneurship (CIE)</p>
+          </div>
         </div>
-        <div class="footer-Register col-12 col-lg-12 col-xl-3">
-          <h3 style="font-size: 19px">Organized By</h3>
-          <p>Centre for Innovation and Entrepreneurship (CIE)</p>
-        </div>
-      </div>
       </div>
       <div class="footer-bottom">
         <p>
