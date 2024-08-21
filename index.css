@@ -721,13 +721,13 @@ highlight {
 }
 
 .img-3 {
-  width: 40%;
+  width: 350px;
   border-radius: 25px;
   aspect-ratio: 8 / 5;
   align-self: center;
   justify-self: center;
   cursor: none;
-  height: 100%;
+  height: 350px;
 }
 .img-3:hover {
   scale: 1.005;
@@ -799,7 +799,6 @@ highlight {
   }
   .img-3 {
     align-items: center;
-    width: 100%;
   }
   .block2-1-2 {
     order: -1;
@@ -995,4 +994,7 @@ nav .nav-links a:hover {
   box-shadow: 5px 5px 10px #58585882;
   max-width: 95%;
   min-height: 190px;
+}
+#soc{
+  font-size: 25px;
 }
