@@ -82,130 +82,13 @@
           <li><a href="#about">Highlights</a></li>
 
           <li><a href="#speakers">Speakers</a></li>
-          <li>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeZQ9CdWHNRl_gWwWROifw-FDzxaTlBg7jArUfEbycs5gMG-A/viewform"
-              class="register-btn"
-              id="register"
-              >Register</a
-            >
-          </li>
+          <li><a href="#gallery">Gallery</a></li>
         </ul>
       </div>
     </nav>
 
-    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-    <div class="timer">
-      <div class="countdown-container">
-        <div class="flip-card" id="daysCard">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <span id="days">00</span>
-            </div>
-            <div class="flip-card-back">
-              <span id="days-back">00</span>
-            </div>
-          </div>
-          <div class="time-label">Days</div>
-        </div>
+    
 
-        <div class="flip-card" id="hoursCard">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <span id="hours">00</span>
-            </div>
-            <div class="flip-card-back">
-              <span id="hours-back">00</span>
-            </div>
-          </div>
-          <div class="time-label">Hours</div>
-        </div>
-
-        <div class="flip-card" id="minutesCard">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <span id="minutes">00</span>
-            </div>
-            <div class="flip-card-back">
-              <span id="minutes-back">00</span>
-            </div>
-          </div>
-          <div class="time-label">Minutes</div>
-        </div>
-
-        <div class="flip-card" id="secondsCard">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <span id="seconds">00</span>
-            </div>
-            <div class="flip-card-back">
-              <span id="seconds-back">00</span>
-            </div>
-          </div>
-          <div class="time-label">Seconds</div>
-        </div>
-      </div>
-      <script>
-        var countdownDate = new Date("aug 22, 2024 09:29:59").getTime();
-
-        function flipCard(id, frontValue, backValue) {
-          let card = document
-            .getElementById(id)
-            .querySelector(".flip-card-inner");
-          let front = document.getElementById(frontValue);
-          let back = document.getElementById(backValue);
-
-          if (front.textContent !== back.textContent) {
-            card.style.transform = "rotateY(180deg)";
-            setTimeout(function () {
-              front.textContent = back.textContent;
-              card.style.transform = "rotateY(0deg)";
-            }, 500);
-          }
-        }
-
-        function updateTimer() {
-          var now = new Date().getTime();
-          var remainingTime = countdownDate - now;
-
-          var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-          var hours = Math.floor(
-            (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          var minutes = Math.floor(
-            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-          document.getElementById("days-back").textContent = days;
-          document.getElementById("hours-back").textContent = (
-            "0" + hours
-          ).slice(-2);
-          document.getElementById("minutes-back").textContent = (
-            "0" + minutes
-          ).slice(-2);
-          document.getElementById("seconds-back").textContent = (
-            "0" + seconds
-          ).slice(-2);
-
-          flipCard("daysCard", "days", "days-back");
-          flipCard("hoursCard", "hours", "hours-back");
-          flipCard("minutesCard", "minutes", "minutes-back");
-          flipCard("secondsCard", "seconds", "seconds-back");
-
-          if (remainingTime < 0) {
-            clearInterval(timer);
-            document.getElementById("days-back").textContent = "00";
-            document.getElementById("hours-back").textContent = "00";
-            document.getElementById("minutes-back").textContent = "00";
-            document.getElementById("seconds-back").textContent = "00";
-          }
-        }
-
-        var timer = setInterval(updateTimer, 1000);
-        updateTimer();
-      </script>
-    </div>
     <div class="centered-text">
       <div class="small-text" id="e-cell" align="center">E-Cell Presents</div>
       <div class="big-text" id="e-summit">E-SUMMIT 2024</div>
@@ -589,6 +472,51 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="gallery" class="bodygallery">
+      <h1 class="galleryhead">Clicks of E-Summit 2K24</h1>
+      <div class="grid-container divgallery">
+        <div class="divgallery">
+          <img class='grid-item grid-item-1 imggallery' src='./Gallery/ecell.JPG' alt=''>
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-2 imggallery' src='./Gallery/ecellteam.JPG' alt=''>
+      
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-3 imggallery' src='./Gallery/jogindhar.JPG' alt=''>
+          
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-4 imggallery' src='./Gallery/Rahul.JPG' alt=''>
+         
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-5 imggallery' src='./Gallery/Sricharan.JPG' alt=''>
+        
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-6 imggallery' src='./Gallery/sahil.JPG' alt=''>
+      
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-7 imggallery' src='./Gallery/3members.JPG' alt=''>
+         
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-8 imggallery' src='./Gallery/anupam.JPG' alt=''>
+         
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-9 imggallery' src='./Gallery/Nandita.JPG' alt=''>
+          
+        </div>
+        <div class="divgallery">
+          <img class='grid-item grid-item-10 imggallery' src='./Gallery/Meet.JPG' alt=''>
+         
+        </div>
+      </div>
+
     </div>
 
     <footer>
